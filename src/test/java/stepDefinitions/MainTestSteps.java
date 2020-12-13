@@ -308,4 +308,48 @@ public class MainTestSteps {
         System.out.println("verified title name and tagname are "+contentAndTag);
 
     }
+
+    @And("verify shared Notes")
+    public void verifySharedNotes() {
+        
+    }
+
+    @And("click on content page and verify")
+    public void clickOnContentPageAndVerify() {
+        
+    }
+
+    @And("click on Link tab and verify")
+    public void clickOnLinkTabAndVerify() {
+        
+    }
+
+    @Then("verify my Links")
+    public void verifyMyLinks() {
+        
+    }
+
+    @Then("verify shared link")
+    public void verifySharedLink() {
+        
+    }
+
+    @Then("go to Notes tab")
+    public void goToNotesTab() {
+        
+        
+    }
+
+    @Then("verify my Notes")
+    public void verifyMyNotes() {
+        
+    }
+
+    @Then("add new link using Add icon and verify")
+    public void addNewLinkUsingAddIconAndVerify() {
+    }
+
+    @Then("add new Note using Add icon and verify")
+    public void addNewNoteUsingAddIconAndVerify() {
+    }
 }
