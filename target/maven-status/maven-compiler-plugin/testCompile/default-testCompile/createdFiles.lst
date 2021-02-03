@@ -1,10 +1,16 @@
+pageObject\MyMentor.class
 stepDefinitions\LoginPageSteps.class
+pageObject\MessagingAndNotificationTabs.class
 pageObject\StoryPage.class
+pageObject\VirtualAssistant.class
 pageObject\ContentPage.class
 utilities\CustomeExtentReport.class
 stepDefinitions\MainTestSteps.class
 pageObject\DashBoard.class
+pageObject\PeoplePage.class
 stepDefinitions\Hooks.class
+utilities\ExtentReportListener.class
+pageObject\UserProfilePage.class
 stepDefinitions\HomePageSteps.class
 testRunner\TestRunner.class
 utilities\CustomeExtentReport$1.class
