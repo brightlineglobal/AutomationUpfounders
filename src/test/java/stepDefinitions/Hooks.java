@@ -2,12 +2,15 @@ package stepDefinitions;
 
 
 import java.io.IOException;
+
+
+import io.cucumber.java.Scenario;
 import org.openqa.selenium.OutputType;
 import org.openqa.selenium.TakesScreenshot;
 import org.openqa.selenium.WebDriver;
-import io.cucumber.core.api.Scenario;
 import io.cucumber.java.After;
 import io.cucumber.java.Before;
+import org.openqa.selenium.WebDriverException;
 import utilities.CustomeExtentReport;
 import utilities.SeleniumDriver;
 
@@ -35,10 +38,17 @@ public class Hooks {
         WebDriver driver=SeleniumDriver.getDriver();
         String screenShotFile = "target" + scenario.getName().replaceAll("", "") + ".jpg";
         if(scenario.isFailed()) {
-            byte[] screenshotBytes = ((TakesScreenshot) driver).getScreenshotAs(OutputType.BYTES);
-            scenario.embed(screenshotBytes, "image/png");
+            try {
+                byte[] screenshotBytes = ((TakesScreenshot) driver).getScreenshotAs(OutputType.BYTES);
+                String testName = scenario.getName();
+                scenario.attach(screenshotBytes, "image/png",testName);
+                //scenario.write(testName);
+            } catch (WebDriverException we){
+                System.err.println(we.getMessage());
+            } catch (ClassCastException e){
+                e.printStackTrace();
+            }
         }
-
         customeExtentReport.createTest(scenario, screenShotFile);
         customeExtentReport.writeToReport();
         SeleniumDriver.tearDown();

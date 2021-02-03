@@ -1,10 +1,14 @@
 package utilities;
 
+import java.io.File;
 import java.io.FileInputStream;
-import java.io.FileNotFoundException;
 import java.io.IOException;
 import java.util.Properties;
 import java.util.concurrent.TimeUnit;
+
+import org.apache.commons.io.FileUtils;
+import org.openqa.selenium.OutputType;
+import org.openqa.selenium.TakesScreenshot;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.chrome.ChromeDriver;
 import org.openqa.selenium.firefox.FirefoxDriver;
@@ -23,7 +27,7 @@ public class SeleniumDriver {
     //1. make constructor private
     //2. write a static method that has return type object of this singleton class( lazy initialization)
 
-    private SeleniumDriver() {
+    public SeleniumDriver() {
         prop = new Properties();
         FileInputStream fis;
 
@@ -31,8 +35,6 @@ public class SeleniumDriver {
             fis = new FileInputStream(
                     "ConfigFiles\\config.properties");
             prop.load(fis);
-        } catch(FileNotFoundException e) {
-            e.printStackTrace();
         } catch(IOException e) {
             e.printStackTrace();
         }
@@ -77,5 +79,17 @@ public class SeleniumDriver {
         seleniumDriver = null;
     }
 
-}
+    public String getScreenshot(){
+        File src = ((TakesScreenshot)driver).getScreenshotAs(OutputType.FILE);
+        String path = System.getProperty("user.dir")+"/screenshots/"+System.currentTimeMillis()+".png";
+        File destination = new File(path);
+        try{
+            FileUtils.copyFile(src,destination);
+        } catch(IOException e){
+            e.printStackTrace();
+        }
+        return path;
+    }
 
+
+}

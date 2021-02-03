@@ -6,7 +6,7 @@ import java.io.IOException;
 import com.aventstack.extentreports.ExtentReports;
 import com.aventstack.extentreports.reporter.ExtentHtmlReporter;
 
-import io.cucumber.core.api.Scenario;
+import io.cucumber.java.Scenario;
 
 public class CustomeExtentReport {
 

@@ -1,4 +1,274 @@
-$(document).ready(function() {var formatter = new CucumberHTML.DOMFormatter($('.cucumber-report'));formatter.uri("file:homepage.feature");
+$(document).ready(function() {var formatter = new CucumberHTML.DOMFormatter($('.cucumber-report'));formatter.uri("file:contentpage.feature");
+formatter.feature({
+  "name": "content page",
+  "description": "",
+  "keyword": "Feature"
+});
+formatter.scenarioOutline({
+  "name": "Access to All Content Page Functionalities",
+  "description": "",
+  "keyword": "Scenario Outline"
+});
+formatter.step({
+  "name": "I open the browser",
+  "keyword": "Given "
+});
+formatter.step({
+  "name": "I navigate to the resourceful application",
+  "keyword": "When "
+});
+formatter.step({
+  "name": "I enter user name \"\u003cemail\u003e\"",
+  "keyword": "And "
+});
+formatter.step({
+  "name": "I enter password \"\u003cpassword\u003e\"",
+  "keyword": "And "
+});
+formatter.step({
+  "name": "click on login button",
+  "keyword": "And "
+});
+formatter.step({
+  "name": "click on Popup window",
+  "keyword": "And "
+});
+formatter.step({
+  "name": "click on content page and verify",
+  "keyword": "And "
+});
+formatter.step({
+  "name": "click on Link tab and verify",
+  "keyword": "And "
+});
+formatter.step({
+  "name": "verify my Links",
+  "keyword": "Then "
+});
+formatter.step({
+  "name": "verify shared link",
+  "keyword": "Then "
+});
+formatter.step({
+  "name": "go to Notes tab",
+  "keyword": "Then "
+});
+formatter.step({
+  "name": "verify my Notes",
+  "keyword": "Then "
+});
+formatter.step({
+  "name": "verify shared Notes",
+  "keyword": "And "
+});
+formatter.step({
+  "name": "add new link using Add icon and verify",
+  "keyword": "Then "
+});
+formatter.step({
+  "name": "add new Note using Add icon and verify",
+  "keyword": "Then "
+});
+formatter.step({
+  "name": "logout",
+  "keyword": "Then "
+});
+formatter.examples({
+  "name": "",
+  "description": "",
+  "keyword": "Examples",
+  "rows": [
+    {
+      "cells": [
+        "email",
+        "password"
+      ]
+    },
+    {
+      "cells": [
+        "gilman.dallas@gmail.com",
+        "Kadir123"
+      ]
+    }
+  ]
+});
+formatter.scenario({
+  "name": "Access to All Content Page Functionalities",
+  "description": "",
+  "keyword": "Scenario Outline"
+});
+formatter.before({
+  "error_message": "java.lang.NoClassDefFoundError: org/openqa/selenium/remote/SessionNotFoundException\r\n\tat utilities.SeleniumDriver.\u003cinit\u003e(SeleniumDriver.java:43)\r\n\tat utilities.SeleniumDriver.setUp(SeleniumDriver.java:68)\r\n\tat stepDefinitions.Hooks.setUp(Hooks.java:22)\r\n\tat sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)\r\n\tat sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)\r\n\tat sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)\r\n\tat java.lang.reflect.Method.invoke(Method.java:498)\r\n\tat cucumber.runtime.Utils$1.call(Utils.java:26)\r\n\tat cucumber.runtime.Timeout.timeout(Timeout.java:16)\r\n\tat cucumber.runtime.Utils.invoke(Utils.java:20)\r\n\tat cucumber.runtime.java.JavaHookDefinition.execute(JavaHookDefinition.java:65)\r\n\tat cucumber.runner.HookDefinitionMatch.runStep(HookDefinitionMatch.java:16)\r\n\tat cucumber.runner.TestStep.executeStep(TestStep.java:65)\r\n\tat cucumber.runner.TestStep.run(TestStep.java:50)\r\n\tat cucumber.runner.TestCase.run(TestCase.java:42)\r\n\tat cucumber.runner.Runner.runPickle(Runner.java:50)\r\n\tat io.cucumber.junit.PickleRunners$NoStepDescriptions.run(PickleRunners.java:146)\r\n\tat io.cucumber.junit.FeatureRunner.runChild(FeatureRunner.java:68)\r\n\tat io.cucumber.junit.FeatureRunner.runChild(FeatureRunner.java:23)\r\n\tat org.junit.runners.ParentRunner$3.run(ParentRunner.java:238)\r\n\tat org.junit.runners.ParentRunner$1.schedule(ParentRunner.java:63)\r\n\tat org.junit.runners.ParentRunner.runChildren(ParentRunner.java:236)\r\n\tat org.junit.runners.ParentRunner.access$000(ParentRunner.java:53)\r\n\tat org.junit.runners.ParentRunner$2.evaluate(ParentRunner.java:229)\r\n\tat org.junit.runners.ParentRunner.run(ParentRunner.java:309)\r\n\tat io.cucumber.junit.Cucumber.runChild(Cucumber.java:142)\r\n\tat io.cucumber.junit.Cucumber.runChild(Cucumber.java:65)\r\n\tat org.junit.runners.ParentRunner$3.run(ParentRunner.java:238)\r\n\tat org.junit.runners.ParentRunner$1.schedule(ParentRunner.java:63)\r\n\tat org.junit.runners.ParentRunner.runChildren(ParentRunner.java:236)\r\n\tat org.junit.runners.ParentRunner.access$000(ParentRunner.java:53)\r\n\tat org.junit.runners.ParentRunner$2.evaluate(ParentRunner.java:229)\r\n\tat io.cucumber.junit.Cucumber$RunCucumber.evaluate(Cucumber.java:172)\r\n\tat org.junit.runners.ParentRunner.run(ParentRunner.java:309)\r\n\tat org.junit.runner.JUnitCore.run(JUnitCore.java:160)\r\n\tat org.junit.runner.JUnitCore.run(JUnitCore.java:138)\r\n\tat org.testng.junit.JUnit4TestRunner.start(JUnit4TestRunner.java:82)\r\n\tat org.testng.junit.JUnit4TestRunner.run(JUnit4TestRunner.java:70)\r\n\tat org.testng.TestRunner$1.run(TestRunner.java:570)\r\n\tat org.testng.TestRunner.runJUnitWorkers(TestRunner.java:717)\r\n\tat org.testng.TestRunner.privateRunJUnit(TestRunner.java:601)\r\n\tat org.testng.TestRunner.run(TestRunner.java:502)\r\n\tat org.testng.SuiteRunner.runTest(SuiteRunner.java:455)\r\n\tat org.testng.SuiteRunner.runSequentially(SuiteRunner.java:450)\r\n\tat org.testng.SuiteRunner.privateRun(SuiteRunner.java:415)\r\n\tat org.testng.SuiteRunner.run(SuiteRunner.java:364)\r\n\tat org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:52)\r\n\tat org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:84)\r\n\tat org.testng.TestNG.runSuitesSequentially(TestNG.java:1208)\r\n\tat org.testng.TestNG.runSuitesLocally(TestNG.java:1137)\r\n\tat org.testng.TestNG.runSuites(TestNG.java:1049)\r\n\tat org.testng.TestNG.run(TestNG.java:1017)\r\n\tat org.apache.maven.surefire.testng.TestNGExecutor.run(TestNGExecutor.java:135)\r\n\tat org.apache.maven.surefire.testng.TestNGDirectoryTestSuite.executeMulti(TestNGDirectoryTestSuite.java:198)\r\n\tat org.apache.maven.surefire.testng.TestNGDirectoryTestSuite.execute(TestNGDirectoryTestSuite.java:94)\r\n\tat org.apache.maven.surefire.testng.TestNGProvider.invoke(TestNGProvider.java:146)\r\n\tat org.apache.maven.surefire.booter.ForkedBooter.invokeProviderInSameClassLoader(ForkedBooter.java:384)\r\n\tat org.apache.maven.surefire.booter.ForkedBooter.runSuitesInProcess(ForkedBooter.java:345)\r\n\tat org.apache.maven.surefire.booter.ForkedBooter.execute(ForkedBooter.java:126)\r\n\tat org.apache.maven.surefire.booter.ForkedBooter.main(ForkedBooter.java:418)\r\nCaused by: java.lang.ClassNotFoundException: org.openqa.selenium.remote.SessionNotFoundException\r\n\tat java.net.URLClassLoader.findClass(URLClassLoader.java:382)\r\n\tat java.lang.ClassLoader.loadClass(ClassLoader.java:418)\r\n\tat sun.misc.Launcher$AppClassLoader.loadClass(Launcher.java:355)\r\n\tat java.lang.ClassLoader.loadClass(ClassLoader.java:351)\r\n\t... 60 more\r\n",
+  "status": "failed"
+});
+formatter.before({
+  "status": "passed"
+});
+formatter.step({
+  "name": "I open the browser",
+  "keyword": "Given "
+});
+formatter.match({
+  "location": "MainTestSteps.i_open_the_browser()"
+});
+formatter.result({
+  "status": "skipped"
+});
+formatter.step({
+  "name": "I navigate to the resourceful application",
+  "keyword": "When "
+});
+formatter.match({
+  "location": "MainTestSteps.i_navigate_to_the_resourceful_application()"
+});
+formatter.result({
+  "status": "skipped"
+});
+formatter.step({
+  "name": "I enter user name \"gilman.dallas@gmail.com\"",
+  "keyword": "And "
+});
+formatter.match({
+  "location": "MainTestSteps.i_enter_user_name(String)"
+});
+formatter.result({
+  "status": "skipped"
+});
+formatter.step({
+  "name": "I enter password \"Kadir123\"",
+  "keyword": "And "
+});
+formatter.match({
+  "location": "MainTestSteps.i_enter_password(String)"
+});
+formatter.result({
+  "status": "skipped"
+});
+formatter.step({
+  "name": "click on login button",
+  "keyword": "And "
+});
+formatter.match({
+  "location": "MainTestSteps.click_on_login_button()"
+});
+formatter.result({
+  "status": "skipped"
+});
+formatter.step({
+  "name": "click on Popup window",
+  "keyword": "And "
+});
+formatter.match({
+  "location": "MainTestSteps.clickOnPopupWindow()"
+});
+formatter.result({
+  "status": "skipped"
+});
+formatter.step({
+  "name": "click on content page and verify",
+  "keyword": "And "
+});
+formatter.match({
+  "location": "MainTestSteps.clickOnContentPageAndVerify()"
+});
+formatter.result({
+  "status": "skipped"
+});
+formatter.step({
+  "name": "click on Link tab and verify",
+  "keyword": "And "
+});
+formatter.match({
+  "location": "MainTestSteps.clickOnLinkTabAndVerify()"
+});
+formatter.result({
+  "status": "skipped"
+});
+formatter.step({
+  "name": "verify my Links",
+  "keyword": "Then "
+});
+formatter.match({
+  "location": "MainTestSteps.verifyMyLinks()"
+});
+formatter.result({
+  "status": "skipped"
+});
+formatter.step({
+  "name": "verify shared link",
+  "keyword": "Then "
+});
+formatter.match({
+  "location": "MainTestSteps.verifySharedLink()"
+});
+formatter.result({
+  "status": "skipped"
+});
+formatter.step({
+  "name": "go to Notes tab",
+  "keyword": "Then "
+});
+formatter.match({
+  "location": "MainTestSteps.goToNotesTab()"
+});
+formatter.result({
+  "status": "skipped"
+});
+formatter.step({
+  "name": "verify my Notes",
+  "keyword": "Then "
+});
+formatter.match({
+  "location": "MainTestSteps.verifyMyNotes()"
+});
+formatter.result({
+  "status": "skipped"
+});
+formatter.step({
+  "name": "verify shared Notes",
+  "keyword": "And "
+});
+formatter.match({
+  "location": "MainTestSteps.verifySharedNotes()"
+});
+formatter.result({
+  "status": "skipped"
+});
+formatter.step({
+  "name": "add new link using Add icon and verify",
+  "keyword": "Then "
+});
+formatter.match({
+  "location": "MainTestSteps.addNewLinkUsingAddIconAndVerify()"
+});
+formatter.result({
+  "status": "skipped"
+});
+formatter.step({
+  "name": "add new Note using Add icon and verify",
+  "keyword": "Then "
+});
+formatter.match({
+  "location": "MainTestSteps.addNewNoteUsingAddIconAndVerify()"
+});
+formatter.result({
+  "status": "skipped"
+});
+formatter.step({
+  "name": "logout",
+  "keyword": "Then "
+});
+formatter.match({
+  "location": "MainTestSteps.logout()"
+});
+formatter.result({
+  "status": "skipped"
+});
+formatter.after({
+  "error_message": "java.lang.NullPointerException\r\n\tat stepDefinitions.Hooks.afterScenario(Hooks.java:38)\r\n\tat sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)\r\n\tat sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)\r\n\tat sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)\r\n\tat java.lang.reflect.Method.invoke(Method.java:498)\r\n\tat cucumber.runtime.Utils$1.call(Utils.java:26)\r\n\tat cucumber.runtime.Timeout.timeout(Timeout.java:16)\r\n\tat cucumber.runtime.Utils.invoke(Utils.java:20)\r\n\tat cucumber.runtime.java.JavaHookDefinition.execute(JavaHookDefinition.java:65)\r\n\tat cucumber.runner.HookDefinitionMatch.runStep(HookDefinitionMatch.java:16)\r\n\tat cucumber.runner.TestStep.executeStep(TestStep.java:65)\r\n\tat cucumber.runner.TestStep.run(TestStep.java:50)\r\n\tat cucumber.runner.TestCase.run(TestCase.java:50)\r\n\tat cucumber.runner.Runner.runPickle(Runner.java:50)\r\n\tat io.cucumber.junit.PickleRunners$NoStepDescriptions.run(PickleRunners.java:146)\r\n\tat io.cucumber.junit.FeatureRunner.runChild(FeatureRunner.java:68)\r\n\tat io.cucumber.junit.FeatureRunner.runChild(FeatureRunner.java:23)\r\n\tat org.junit.runners.ParentRunner$3.run(ParentRunner.java:238)\r\n\tat org.junit.runners.ParentRunner$1.schedule(ParentRunner.java:63)\r\n\tat org.junit.runners.ParentRunner.runChildren(ParentRunner.java:236)\r\n\tat org.junit.runners.ParentRunner.access$000(ParentRunner.java:53)\r\n\tat org.junit.runners.ParentRunner$2.evaluate(ParentRunner.java:229)\r\n\tat org.junit.runners.ParentRunner.run(ParentRunner.java:309)\r\n\tat io.cucumber.junit.Cucumber.runChild(Cucumber.java:142)\r\n\tat io.cucumber.junit.Cucumber.runChild(Cucumber.java:65)\r\n\tat org.junit.runners.ParentRunner$3.run(ParentRunner.java:238)\r\n\tat org.junit.runners.ParentRunner$1.schedule(ParentRunner.java:63)\r\n\tat org.junit.runners.ParentRunner.runChildren(ParentRunner.java:236)\r\n\tat org.junit.runners.ParentRunner.access$000(ParentRunner.java:53)\r\n\tat org.junit.runners.ParentRunner$2.evaluate(ParentRunner.java:229)\r\n\tat io.cucumber.junit.Cucumber$RunCucumber.evaluate(Cucumber.java:172)\r\n\tat org.junit.runners.ParentRunner.run(ParentRunner.java:309)\r\n\tat org.junit.runner.JUnitCore.run(JUnitCore.java:160)\r\n\tat org.junit.runner.JUnitCore.run(JUnitCore.java:138)\r\n\tat org.testng.junit.JUnit4TestRunner.start(JUnit4TestRunner.java:82)\r\n\tat org.testng.junit.JUnit4TestRunner.run(JUnit4TestRunner.java:70)\r\n\tat org.testng.TestRunner$1.run(TestRunner.java:570)\r\n\tat org.testng.TestRunner.runJUnitWorkers(TestRunner.java:717)\r\n\tat org.testng.TestRunner.privateRunJUnit(TestRunner.java:601)\r\n\tat org.testng.TestRunner.run(TestRunner.java:502)\r\n\tat org.testng.SuiteRunner.runTest(SuiteRunner.java:455)\r\n\tat org.testng.SuiteRunner.runSequentially(SuiteRunner.java:450)\r\n\tat org.testng.SuiteRunner.privateRun(SuiteRunner.java:415)\r\n\tat org.testng.SuiteRunner.run(SuiteRunner.java:364)\r\n\tat org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:52)\r\n\tat org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:84)\r\n\tat org.testng.TestNG.runSuitesSequentially(TestNG.java:1208)\r\n\tat org.testng.TestNG.runSuitesLocally(TestNG.java:1137)\r\n\tat org.testng.TestNG.runSuites(TestNG.java:1049)\r\n\tat org.testng.TestNG.run(TestNG.java:1017)\r\n\tat org.apache.maven.surefire.testng.TestNGExecutor.run(TestNGExecutor.java:135)\r\n\tat org.apache.maven.surefire.testng.TestNGDirectoryTestSuite.executeMulti(TestNGDirectoryTestSuite.java:198)\r\n\tat org.apache.maven.surefire.testng.TestNGDirectoryTestSuite.execute(TestNGDirectoryTestSuite.java:94)\r\n\tat org.apache.maven.surefire.testng.TestNGProvider.invoke(TestNGProvider.java:146)\r\n\tat org.apache.maven.surefire.booter.ForkedBooter.invokeProviderInSameClassLoader(ForkedBooter.java:384)\r\n\tat org.apache.maven.surefire.booter.ForkedBooter.runSuitesInProcess(ForkedBooter.java:345)\r\n\tat org.apache.maven.surefire.booter.ForkedBooter.execute(ForkedBooter.java:126)\r\n\tat org.apache.maven.surefire.booter.ForkedBooter.main(ForkedBooter.java:418)\r\n",
+  "status": "failed"
+});
+formatter.uri("file:homepage.feature");
 formatter.feature({
   "name": "home page",
   "description": "",
@@ -796,6 +1066,396 @@ formatter.step({
 });
 formatter.match({
   "location": "MainTestSteps.i_click_on_logout_link()"
+});
+formatter.result({
+  "status": "skipped"
+});
+formatter.after({
+  "error_message": "java.lang.NullPointerException\r\n\tat stepDefinitions.Hooks.afterScenario(Hooks.java:38)\r\n\tat sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)\r\n\tat sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)\r\n\tat sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)\r\n\tat java.lang.reflect.Method.invoke(Method.java:498)\r\n\tat cucumber.runtime.Utils$1.call(Utils.java:26)\r\n\tat cucumber.runtime.Timeout.timeout(Timeout.java:16)\r\n\tat cucumber.runtime.Utils.invoke(Utils.java:20)\r\n\tat cucumber.runtime.java.JavaHookDefinition.execute(JavaHookDefinition.java:65)\r\n\tat cucumber.runner.HookDefinitionMatch.runStep(HookDefinitionMatch.java:16)\r\n\tat cucumber.runner.TestStep.executeStep(TestStep.java:65)\r\n\tat cucumber.runner.TestStep.run(TestStep.java:50)\r\n\tat cucumber.runner.TestCase.run(TestCase.java:50)\r\n\tat cucumber.runner.Runner.runPickle(Runner.java:50)\r\n\tat io.cucumber.junit.PickleRunners$NoStepDescriptions.run(PickleRunners.java:146)\r\n\tat io.cucumber.junit.FeatureRunner.runChild(FeatureRunner.java:68)\r\n\tat io.cucumber.junit.FeatureRunner.runChild(FeatureRunner.java:23)\r\n\tat org.junit.runners.ParentRunner$3.run(ParentRunner.java:238)\r\n\tat org.junit.runners.ParentRunner$1.schedule(ParentRunner.java:63)\r\n\tat org.junit.runners.ParentRunner.runChildren(ParentRunner.java:236)\r\n\tat org.junit.runners.ParentRunner.access$000(ParentRunner.java:53)\r\n\tat org.junit.runners.ParentRunner$2.evaluate(ParentRunner.java:229)\r\n\tat org.junit.runners.ParentRunner.run(ParentRunner.java:309)\r\n\tat io.cucumber.junit.Cucumber.runChild(Cucumber.java:142)\r\n\tat io.cucumber.junit.Cucumber.runChild(Cucumber.java:65)\r\n\tat org.junit.runners.ParentRunner$3.run(ParentRunner.java:238)\r\n\tat org.junit.runners.ParentRunner$1.schedule(ParentRunner.java:63)\r\n\tat org.junit.runners.ParentRunner.runChildren(ParentRunner.java:236)\r\n\tat org.junit.runners.ParentRunner.access$000(ParentRunner.java:53)\r\n\tat org.junit.runners.ParentRunner$2.evaluate(ParentRunner.java:229)\r\n\tat io.cucumber.junit.Cucumber$RunCucumber.evaluate(Cucumber.java:172)\r\n\tat org.junit.runners.ParentRunner.run(ParentRunner.java:309)\r\n\tat org.junit.runner.JUnitCore.run(JUnitCore.java:160)\r\n\tat org.junit.runner.JUnitCore.run(JUnitCore.java:138)\r\n\tat org.testng.junit.JUnit4TestRunner.start(JUnit4TestRunner.java:82)\r\n\tat org.testng.junit.JUnit4TestRunner.run(JUnit4TestRunner.java:70)\r\n\tat org.testng.TestRunner$1.run(TestRunner.java:570)\r\n\tat org.testng.TestRunner.runJUnitWorkers(TestRunner.java:717)\r\n\tat org.testng.TestRunner.privateRunJUnit(TestRunner.java:601)\r\n\tat org.testng.TestRunner.run(TestRunner.java:502)\r\n\tat org.testng.SuiteRunner.runTest(SuiteRunner.java:455)\r\n\tat org.testng.SuiteRunner.runSequentially(SuiteRunner.java:450)\r\n\tat org.testng.SuiteRunner.privateRun(SuiteRunner.java:415)\r\n\tat org.testng.SuiteRunner.run(SuiteRunner.java:364)\r\n\tat org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:52)\r\n\tat org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:84)\r\n\tat org.testng.TestNG.runSuitesSequentially(TestNG.java:1208)\r\n\tat org.testng.TestNG.runSuitesLocally(TestNG.java:1137)\r\n\tat org.testng.TestNG.runSuites(TestNG.java:1049)\r\n\tat org.testng.TestNG.run(TestNG.java:1017)\r\n\tat org.apache.maven.surefire.testng.TestNGExecutor.run(TestNGExecutor.java:135)\r\n\tat org.apache.maven.surefire.testng.TestNGDirectoryTestSuite.executeMulti(TestNGDirectoryTestSuite.java:198)\r\n\tat org.apache.maven.surefire.testng.TestNGDirectoryTestSuite.execute(TestNGDirectoryTestSuite.java:94)\r\n\tat org.apache.maven.surefire.testng.TestNGProvider.invoke(TestNGProvider.java:146)\r\n\tat org.apache.maven.surefire.booter.ForkedBooter.invokeProviderInSameClassLoader(ForkedBooter.java:384)\r\n\tat org.apache.maven.surefire.booter.ForkedBooter.runSuitesInProcess(ForkedBooter.java:345)\r\n\tat org.apache.maven.surefire.booter.ForkedBooter.execute(ForkedBooter.java:126)\r\n\tat org.apache.maven.surefire.booter.ForkedBooter.main(ForkedBooter.java:418)\r\n",
+  "status": "failed"
+});
+formatter.uri("file:storypage.feature");
+formatter.feature({
+  "name": "story page",
+  "description": "",
+  "keyword": "Feature"
+});
+formatter.scenarioOutline({
+  "name": "Access to All Story Page Functionalities",
+  "description": "",
+  "keyword": "Scenario Outline"
+});
+formatter.step({
+  "name": "I open the browser",
+  "keyword": "Given "
+});
+formatter.step({
+  "name": "I navigate to the resourceful application",
+  "keyword": "When "
+});
+formatter.step({
+  "name": "I enter user name \"\u003cemail\u003e\"",
+  "keyword": "And "
+});
+formatter.step({
+  "name": "I enter password \"\u003cpassword\u003e\"",
+  "keyword": "And "
+});
+formatter.step({
+  "name": "click on login button",
+  "keyword": "And "
+});
+formatter.step({
+  "name": "click on Popup window",
+  "keyword": "And "
+});
+formatter.step({
+  "name": "click on Story Page Link",
+  "keyword": "And "
+});
+formatter.step({
+  "name": "click on Popup window",
+  "keyword": "And "
+});
+formatter.step({
+  "name": "go to Analytics tab and verify",
+  "keyword": "And "
+});
+formatter.step({
+  "name": "click on Story page dash board tab",
+  "keyword": "And "
+});
+formatter.step({
+  "name": "verify Newsletter iframe title \"Newsletter Signups\"",
+  "keyword": "And "
+});
+formatter.step({
+  "name": "verify Inbox iframe title \"Inbox\"",
+  "keyword": "And "
+});
+formatter.step({
+  "name": "go to personal Story link",
+  "keyword": "And "
+});
+formatter.step({
+  "name": "verify page title \"https://upfounders-staging.herokuapp.com/story/kgilman",
+  "keyword": "And "
+});
+formatter.step({
+  "name": "input left side bar and click save",
+  "keyword": "And "
+});
+formatter.step({
+  "name": "sign up \"gilman.dallas@gmail.com\" for newsletter and verify \"You\u0027ve successfully subscribed to newsletter.\" success message",
+  "keyword": "And "
+});
+formatter.step({
+  "name": "change Our Story content \"We are a new company\"",
+  "keyword": "And "
+});
+formatter.step({
+  "name": "input About Us \"We want to success\"",
+  "keyword": "And "
+});
+formatter.step({
+  "name": "click on \"LOOKING FOR COFOUNDER\" action button and send action invitation to \"Heliman\" and \"sales@unitextech.com\" with \"please join us\" message",
+  "keyword": "And "
+});
+formatter.step({
+  "name": "click on add action button to create new action label as \"LOOKING FOR INVESTOR\" with content as \"WE NEED STARTUP INVESTMENT\"",
+  "keyword": "And "
+});
+formatter.step({
+  "name": "verify newly created action label \"LOOKING FOR INVESTOR\"",
+  "keyword": "And "
+});
+formatter.step({
+  "name": "click preview and take screenshot",
+  "keyword": "And "
+});
+formatter.step({
+  "name": "click publish and verify succesfull message \"Your story page Url: https://upfounders-staging.herokuapp.com/story/gkadir\"",
+  "keyword": "And "
+});
+formatter.step({
+  "name": "click the link  \"https://upfounders-staging.herokuapp.com/story/gkadir\"",
+  "keyword": "And "
+});
+formatter.step({
+  "name": "go to share your story link and verify \"https://upfounders.co/join-waitinglist-s/\" link",
+  "keyword": "And "
+});
+formatter.step({
+  "name": "navigate back 3 times to dashboard page and close popup window",
+  "keyword": "And "
+});
+formatter.step({
+  "name": "logout",
+  "keyword": "Then "
+});
+formatter.examples({
+  "name": "",
+  "description": "",
+  "keyword": "Examples",
+  "rows": [
+    {
+      "cells": [
+        "email",
+        "password"
+      ]
+    },
+    {
+      "cells": [
+        "gilman.dallas@gmail.com",
+        "Kadir123"
+      ]
+    }
+  ]
+});
+formatter.scenario({
+  "name": "Access to All Story Page Functionalities",
+  "description": "",
+  "keyword": "Scenario Outline"
+});
+formatter.before({
+  "error_message": "java.lang.NoClassDefFoundError: org/openqa/selenium/remote/SessionNotFoundException\r\n\tat utilities.SeleniumDriver.\u003cinit\u003e(SeleniumDriver.java:43)\r\n\tat utilities.SeleniumDriver.setUp(SeleniumDriver.java:68)\r\n\tat stepDefinitions.Hooks.setUp(Hooks.java:22)\r\n\tat sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)\r\n\tat sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)\r\n\tat sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)\r\n\tat java.lang.reflect.Method.invoke(Method.java:498)\r\n\tat cucumber.runtime.Utils$1.call(Utils.java:26)\r\n\tat cucumber.runtime.Timeout.timeout(Timeout.java:16)\r\n\tat cucumber.runtime.Utils.invoke(Utils.java:20)\r\n\tat cucumber.runtime.java.JavaHookDefinition.execute(JavaHookDefinition.java:65)\r\n\tat cucumber.runner.HookDefinitionMatch.runStep(HookDefinitionMatch.java:16)\r\n\tat cucumber.runner.TestStep.executeStep(TestStep.java:65)\r\n\tat cucumber.runner.TestStep.run(TestStep.java:50)\r\n\tat cucumber.runner.TestCase.run(TestCase.java:42)\r\n\tat cucumber.runner.Runner.runPickle(Runner.java:50)\r\n\tat io.cucumber.junit.PickleRunners$NoStepDescriptions.run(PickleRunners.java:146)\r\n\tat io.cucumber.junit.FeatureRunner.runChild(FeatureRunner.java:68)\r\n\tat io.cucumber.junit.FeatureRunner.runChild(FeatureRunner.java:23)\r\n\tat org.junit.runners.ParentRunner$3.run(ParentRunner.java:238)\r\n\tat org.junit.runners.ParentRunner$1.schedule(ParentRunner.java:63)\r\n\tat org.junit.runners.ParentRunner.runChildren(ParentRunner.java:236)\r\n\tat org.junit.runners.ParentRunner.access$000(ParentRunner.java:53)\r\n\tat org.junit.runners.ParentRunner$2.evaluate(ParentRunner.java:229)\r\n\tat org.junit.runners.ParentRunner.run(ParentRunner.java:309)\r\n\tat io.cucumber.junit.Cucumber.runChild(Cucumber.java:142)\r\n\tat io.cucumber.junit.Cucumber.runChild(Cucumber.java:65)\r\n\tat org.junit.runners.ParentRunner$3.run(ParentRunner.java:238)\r\n\tat org.junit.runners.ParentRunner$1.schedule(ParentRunner.java:63)\r\n\tat org.junit.runners.ParentRunner.runChildren(ParentRunner.java:236)\r\n\tat org.junit.runners.ParentRunner.access$000(ParentRunner.java:53)\r\n\tat org.junit.runners.ParentRunner$2.evaluate(ParentRunner.java:229)\r\n\tat io.cucumber.junit.Cucumber$RunCucumber.evaluate(Cucumber.java:172)\r\n\tat org.junit.runners.ParentRunner.run(ParentRunner.java:309)\r\n\tat org.junit.runner.JUnitCore.run(JUnitCore.java:160)\r\n\tat org.junit.runner.JUnitCore.run(JUnitCore.java:138)\r\n\tat org.testng.junit.JUnit4TestRunner.start(JUnit4TestRunner.java:82)\r\n\tat org.testng.junit.JUnit4TestRunner.run(JUnit4TestRunner.java:70)\r\n\tat org.testng.TestRunner$1.run(TestRunner.java:570)\r\n\tat org.testng.TestRunner.runJUnitWorkers(TestRunner.java:717)\r\n\tat org.testng.TestRunner.privateRunJUnit(TestRunner.java:601)\r\n\tat org.testng.TestRunner.run(TestRunner.java:502)\r\n\tat org.testng.SuiteRunner.runTest(SuiteRunner.java:455)\r\n\tat org.testng.SuiteRunner.runSequentially(SuiteRunner.java:450)\r\n\tat org.testng.SuiteRunner.privateRun(SuiteRunner.java:415)\r\n\tat org.testng.SuiteRunner.run(SuiteRunner.java:364)\r\n\tat org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:52)\r\n\tat org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:84)\r\n\tat org.testng.TestNG.runSuitesSequentially(TestNG.java:1208)\r\n\tat org.testng.TestNG.runSuitesLocally(TestNG.java:1137)\r\n\tat org.testng.TestNG.runSuites(TestNG.java:1049)\r\n\tat org.testng.TestNG.run(TestNG.java:1017)\r\n\tat org.apache.maven.surefire.testng.TestNGExecutor.run(TestNGExecutor.java:135)\r\n\tat org.apache.maven.surefire.testng.TestNGDirectoryTestSuite.executeMulti(TestNGDirectoryTestSuite.java:198)\r\n\tat org.apache.maven.surefire.testng.TestNGDirectoryTestSuite.execute(TestNGDirectoryTestSuite.java:94)\r\n\tat org.apache.maven.surefire.testng.TestNGProvider.invoke(TestNGProvider.java:146)\r\n\tat org.apache.maven.surefire.booter.ForkedBooter.invokeProviderInSameClassLoader(ForkedBooter.java:384)\r\n\tat org.apache.maven.surefire.booter.ForkedBooter.runSuitesInProcess(ForkedBooter.java:345)\r\n\tat org.apache.maven.surefire.booter.ForkedBooter.execute(ForkedBooter.java:126)\r\n\tat org.apache.maven.surefire.booter.ForkedBooter.main(ForkedBooter.java:418)\r\nCaused by: java.lang.ClassNotFoundException: org.openqa.selenium.remote.SessionNotFoundException\r\n\tat java.net.URLClassLoader.findClass(URLClassLoader.java:382)\r\n\tat java.lang.ClassLoader.loadClass(ClassLoader.java:418)\r\n\tat sun.misc.Launcher$AppClassLoader.loadClass(Launcher.java:355)\r\n\tat java.lang.ClassLoader.loadClass(ClassLoader.java:351)\r\n\t... 60 more\r\n",
+  "status": "failed"
+});
+formatter.before({
+  "status": "passed"
+});
+formatter.step({
+  "name": "I open the browser",
+  "keyword": "Given "
+});
+formatter.match({
+  "location": "MainTestSteps.i_open_the_browser()"
+});
+formatter.result({
+  "status": "skipped"
+});
+formatter.step({
+  "name": "I navigate to the resourceful application",
+  "keyword": "When "
+});
+formatter.match({
+  "location": "MainTestSteps.i_navigate_to_the_resourceful_application()"
+});
+formatter.result({
+  "status": "skipped"
+});
+formatter.step({
+  "name": "I enter user name \"gilman.dallas@gmail.com\"",
+  "keyword": "And "
+});
+formatter.match({
+  "location": "MainTestSteps.i_enter_user_name(String)"
+});
+formatter.result({
+  "status": "skipped"
+});
+formatter.step({
+  "name": "I enter password \"Kadir123\"",
+  "keyword": "And "
+});
+formatter.match({
+  "location": "MainTestSteps.i_enter_password(String)"
+});
+formatter.result({
+  "status": "skipped"
+});
+formatter.step({
+  "name": "click on login button",
+  "keyword": "And "
+});
+formatter.match({
+  "location": "MainTestSteps.click_on_login_button()"
+});
+formatter.result({
+  "status": "skipped"
+});
+formatter.step({
+  "name": "click on Popup window",
+  "keyword": "And "
+});
+formatter.match({
+  "location": "MainTestSteps.clickOnPopupWindow()"
+});
+formatter.result({
+  "status": "skipped"
+});
+formatter.step({
+  "name": "click on Story Page Link",
+  "keyword": "And "
+});
+formatter.match({
+  "location": "MainTestSteps.clickOnStoryPageLink()"
+});
+formatter.result({
+  "status": "skipped"
+});
+formatter.step({
+  "name": "click on Popup window",
+  "keyword": "And "
+});
+formatter.match({
+  "location": "MainTestSteps.clickOnPopupWindow()"
+});
+formatter.result({
+  "status": "skipped"
+});
+formatter.step({
+  "name": "go to Analytics tab and verify",
+  "keyword": "And "
+});
+formatter.match({
+  "location": "MainTestSteps.goToAnalyticsTabAndVerify()"
+});
+formatter.result({
+  "status": "skipped"
+});
+formatter.step({
+  "name": "click on Story page dash board tab",
+  "keyword": "And "
+});
+formatter.match({});
+formatter.result({
+  "status": "undefined"
+});
+formatter.step({
+  "name": "verify Newsletter iframe title \"Newsletter Signups\"",
+  "keyword": "And "
+});
+formatter.match({});
+formatter.result({
+  "status": "undefined"
+});
+formatter.step({
+  "name": "verify Inbox iframe title \"Inbox\"",
+  "keyword": "And "
+});
+formatter.match({});
+formatter.result({
+  "status": "undefined"
+});
+formatter.step({
+  "name": "go to personal Story link",
+  "keyword": "And "
+});
+formatter.match({});
+formatter.result({
+  "status": "undefined"
+});
+formatter.step({
+  "name": "verify page title \"https://upfounders-staging.herokuapp.com/story/kgilman",
+  "keyword": "And "
+});
+formatter.match({});
+formatter.result({
+  "status": "undefined"
+});
+formatter.step({
+  "name": "input left side bar and click save",
+  "keyword": "And "
+});
+formatter.match({});
+formatter.result({
+  "status": "undefined"
+});
+formatter.step({
+  "name": "sign up \"gilman.dallas@gmail.com\" for newsletter and verify \"You\u0027ve successfully subscribed to newsletter.\" success message",
+  "keyword": "And "
+});
+formatter.match({});
+formatter.result({
+  "status": "undefined"
+});
+formatter.step({
+  "name": "change Our Story content \"We are a new company\"",
+  "keyword": "And "
+});
+formatter.match({});
+formatter.result({
+  "status": "undefined"
+});
+formatter.step({
+  "name": "input About Us \"We want to success\"",
+  "keyword": "And "
+});
+formatter.match({});
+formatter.result({
+  "status": "undefined"
+});
+formatter.step({
+  "name": "click on \"LOOKING FOR COFOUNDER\" action button and send action invitation to \"Heliman\" and \"sales@unitextech.com\" with \"please join us\" message",
+  "keyword": "And "
+});
+formatter.match({});
+formatter.result({
+  "status": "undefined"
+});
+formatter.step({
+  "name": "click on add action button to create new action label as \"LOOKING FOR INVESTOR\" with content as \"WE NEED STARTUP INVESTMENT\"",
+  "keyword": "And "
+});
+formatter.match({});
+formatter.result({
+  "status": "undefined"
+});
+formatter.step({
+  "name": "verify newly created action label \"LOOKING FOR INVESTOR\"",
+  "keyword": "And "
+});
+formatter.match({});
+formatter.result({
+  "status": "undefined"
+});
+formatter.step({
+  "name": "click preview and take screenshot",
+  "keyword": "And "
+});
+formatter.match({});
+formatter.result({
+  "status": "undefined"
+});
+formatter.step({
+  "name": "click publish and verify succesfull message \"Your story page Url: https://upfounders-staging.herokuapp.com/story/gkadir\"",
+  "keyword": "And "
+});
+formatter.match({});
+formatter.result({
+  "status": "undefined"
+});
+formatter.step({
+  "name": "click the link  \"https://upfounders-staging.herokuapp.com/story/gkadir\"",
+  "keyword": "And "
+});
+formatter.match({});
+formatter.result({
+  "status": "undefined"
+});
+formatter.step({
+  "name": "go to share your story link and verify \"https://upfounders.co/join-waitinglist-s/\" link",
+  "keyword": "And "
+});
+formatter.match({});
+formatter.result({
+  "status": "undefined"
+});
+formatter.step({
+  "name": "navigate back 3 times to dashboard page and close popup window",
+  "keyword": "And "
+});
+formatter.match({});
+formatter.result({
+  "status": "undefined"
+});
+formatter.step({
+  "name": "logout",
+  "keyword": "Then "
+});
+formatter.match({
+  "location": "MainTestSteps.logout()"
 });
 formatter.result({
   "status": "skipped"

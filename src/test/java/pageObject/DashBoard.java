@@ -4,12 +4,15 @@ import org.openqa.selenium.*;
 import org.openqa.selenium.support.FindBy;
 import org.openqa.selenium.support.How;
 import org.openqa.selenium.support.PageFactory;
+import org.openqa.selenium.support.ui.ExpectedConditions;
+import org.openqa.selenium.support.ui.WebDriverWait;
 
 public class DashBoard {
 
 
 
         public WebDriver driver;
+        public WebDriverWait wait;
 
         public DashBoard(WebDriver driver) {
 
@@ -55,13 +58,29 @@ public class DashBoard {
         @FindBy(xpath = "//h4")
         WebElement subtitleAddContact;
 
-        @FindBy(xpath = "//p[@class='pointer nav-item'][contains(.,'Log out')]")
+        //@FindBy(xpath = "//p[@class='pointer nav-item'][contains(.,'Log out')]")
+        @FindBy(xpath="/html/body/app-root/app-admin-layout/div/div[1]/app-sidebar/div[2]/ul/li/p[2]")
         WebElement logout;
+
         @FindBy(xpath = "(//img[@class='userImg ng-star-inserted'])[1]")
         WebElement anyContact;
 
         @FindBy(xpath = "//*[@id='joyride-step-firstStep']/div/div[3]/div[2]/div/joyride-button/button")
         WebElement StoryPopupMessage;
+
+       // @FindBy(xpath="/html/body/app-root/app-admin-layout/div/div[1]/app-sidebar/div[2]/ul/span[5]/li/a/p")
+        //WebElement contentPageLink;
+
+    @FindBy(css="a[href='/dashboard/content']")
+    WebElement contentPageLink;
+
+    @FindBy(xpath="/html/body/app-root/app-admin-layout/div/div[1]/app-sidebar/div[2]/ul/span[4]/li")
+    WebElement peoplePageLink;
+
+
+   // @FindBy(xpath="/html/body/app-root/app-admin-layout/div/div[1]/app-sidebar/div[2]/ul/span[3]/li/a")
+   @FindBy(xpath = "//p[contains(.,'Story')]")
+    WebElement storyPageLink;
 
 
 
@@ -73,6 +92,18 @@ public class DashBoard {
             StoryPopupMessage.isDisplayed();
             return true;
         }
+        public void goToPeoplePage()throws Exception{
+        peoplePageLink.click();
+        Thread.sleep(3000);
+        }
+
+    public void goToContentPage() throws Exception {
+        JavascriptExecutor js = (JavascriptExecutor)driver;
+        js.executeScript("arguments[0].scrollIntoView()",contentPageLink);
+        Thread.sleep(3000);
+        js.executeScript("arguments[0].click()",contentPageLink);
+        Thread.sleep(3000);
+    }
 
         public void goToInvatedPage() throws Exception {
             JavascriptExecutor executor = (JavascriptExecutor)driver;
@@ -124,14 +155,23 @@ public class DashBoard {
             logout.isDisplayed();
         }
 
-        public void clickOnPopupWindowMessage() {
-
-            StoryPopupMessage.click();
+        public void clickOnPopupWindowMessage() throws Exception {
+            JavascriptExecutor js= (JavascriptExecutor)driver;
+            js.executeScript("arguments[0].click()",StoryPopupMessage);
+            Thread.sleep(2000);
+            //StoryPopupMessage.click();
 
         }
-        public void clickOnLogOutLink() {
+        public void clickOnLogOutLink() throws Exception {
+            Thread.sleep(5000);
+            JavascriptExecutor js = (JavascriptExecutor)driver;
+            js.executeScript("arguments[0].scrollIntoView();",logout);
+            Thread.sleep(2000);
+            js.executeScript("arguments[0].click()",logout);
 
-            logout.click();
+           // wait = new WebDriverWait(driver,15);
+            //wait.until(ExpectedConditions.visibilityOfElementLocated(By.xpath("//p[@class='pointer nav-item'][contains(.,'Log out')]")));
+           // logout.click();
         }
 
         public void clickOnHomePageLink(){
@@ -328,7 +368,13 @@ public class DashBoard {
             String counterResult = likeCounter.getText();
             return counterResult;
         }
+
+
+    public void clickOnStoryPage() throws Exception {
+            Thread.sleep(3000);
+            storyPageLink.click();
     }
+}
 //1. post need clcik twice
 //2. link still opens same page
 //3. post are dynamic

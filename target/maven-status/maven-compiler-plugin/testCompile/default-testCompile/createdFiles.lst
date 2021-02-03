@@ -1,4 +1,5 @@
 stepDefinitions\LoginPageSteps.class
+pageObject\StoryPage.class
 pageObject\ContentPage.class
 utilities\CustomeExtentReport.class
 stepDefinitions\MainTestSteps.class

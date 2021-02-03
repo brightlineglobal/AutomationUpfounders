@@ -2,11 +2,13 @@
 <!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
 <suite name="BDD Test Suite" verbose="1" parallel="tests"
 thread-count="1" configfailurepolicy="continue">
-    <test name="AutomationUpfounders" annotations="JDK" preserve-order="true">
+    <listeners>
+        <listener class-name="utilities.ExtentReportListener"></listener>
+    </listeners>
+    <test name="AutomationFounders">
         <classes>
-            <class name="testRunner.TestRunner"/>
+            <class name="testRunner.TestRunner"></class>
         </classes>
-
 
     </test>
 </suite> <!-- Suite -->

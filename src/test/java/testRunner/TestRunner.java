@@ -6,9 +6,9 @@ import io.cucumber.junit.Cucumber;
 @RunWith(Cucumber.class)
 @CucumberOptions(
 
-        features = {"C://AutomationUpFounders//features"},
+        features = {"C://AutomationUpFounders//Features"},
         glue = {"stepDefinitions"},
-        plugin = {"pretty", "html:test-out"},
+        plugin = {"json:target/cucumber.json","pretty", "html:test-out/cucumber-reports.html","junit:test-out/cucumber.xml"},
         dryRun = false,
         monochrome = true
 
