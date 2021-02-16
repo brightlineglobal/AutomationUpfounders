@@ -33,7 +33,7 @@ public class SeleniumDriver {
 
         try {
             fis = new FileInputStream(
-                    "ConfigFiles\\config.properties");
+                    "./ConfigFiles/config.properties");
             prop.load(fis);
         } catch(IOException e) {
             e.printStackTrace();
